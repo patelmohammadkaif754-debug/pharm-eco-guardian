@@ -244,6 +244,8 @@ function Index() {
           </p>
         </div>
       </section>
+
+      <TeamIdentityBlock />
     </div>
   );
 }
