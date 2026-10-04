@@ -146,8 +146,37 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className="border-t border-white/10 py-4 text-center text-xs text-primary-foreground/60">
-        © 2026 EcoPV-India (student prototype). For educational purposes only.
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-7 sm:px-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-3">
+            <span
+              aria-hidden
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 font-display text-xs font-extrabold tracking-wider text-white ring-1 ring-white/25"
+            >
+              RP
+            </span>
+            <div>
+              <p className="font-display text-sm font-extrabold uppercase tracking-[0.16em] text-white">
+                RISING PHARMAVISION
+              </p>
+              <p className="mt-0.5 text-xs tracking-wide text-primary-foreground/70">
+                Innovate • Protect • Sustain
+              </p>
+            </div>
+          </div>
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-teal/40 bg-teal/15 px-4 py-1.5 text-xs font-semibold text-white">
+            VBYLD 2027 – Hack for Social Cause
+          </span>
+        </div>
+      </div>
+      <div className="border-t border-white/10 py-4">
+        <p className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 text-center text-xs text-primary-foreground/60">
+          <span className="whitespace-nowrap">© 2026 EcoPV-India (student prototype)</span>
+          <span aria-hidden>·</span>
+          <span className="whitespace-nowrap">Built by RISING PHARMAVISION</span>
+          <span aria-hidden>·</span>
+          <span className="whitespace-nowrap">VBYLD 2027 – Hack for Social Cause</span>
+        </p>
       </div>
     </footer>
   );

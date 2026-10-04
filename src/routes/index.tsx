@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { DemoBadge } from "@/components/DemoBadge";
 import { DEMO_SIGNALS, CATEGORY_COUNTS } from "@/lib/demoData";
+import { TeamSection, TeamIdentityBlock } from "@/components/TeamSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -224,6 +225,9 @@ function Index() {
         </div>
       </section>
 
+      {/* Project team */}
+      <TeamSection />
+
       {/* Scope note */}
       <section className="mx-auto max-w-6xl px-4 pb-4 sm:px-6">
         <div className="rounded-2xl border border-leaf/30 bg-leaf-soft/60 p-6 sm:p-8">
@@ -240,6 +244,8 @@ function Index() {
           </p>
         </div>
       </section>
+
+      <TeamIdentityBlock />
     </div>
   );
 }
