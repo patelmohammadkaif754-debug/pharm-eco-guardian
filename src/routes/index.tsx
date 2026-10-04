@@ -89,9 +89,9 @@ function Index() {
 
           <div className="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
             <Stat value={String(DEMO_REPORTS.length)} label="Simulated reports" />
-            <Stat value="6" label="Active demo signals" />
+            <Stat value={String(DEMO_SIGNALS.length)} label="Screened patterns" />
             <Stat value={String(highSignals)} label="High-priority patterns" />
-            <Stat value="28" label="States represented" />
+            <Stat value={String(new Set(DEMO_REPORTS.map((r) => r.location)).size)} label="Demo locations" />
           </div>
 
           <p className="mt-6 flex items-center gap-2 text-xs text-primary-foreground/70">
@@ -203,7 +203,7 @@ function Index() {
             </span>
             <h3 className="mt-4 font-display text-lg font-semibold text-foreground">EcoPV Dashboard</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Review the simulated case queue, KPIs and category trends that
+              Filter simulated reports and explore medium, concern and pharmaceutical charts that
               reviewers would monitor.
             </p>
             <span className="mt-4 inline-block text-sm font-semibold text-teal group-hover:underline">Open dashboard →</span>
@@ -217,8 +217,8 @@ function Index() {
             </span>
             <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Signal Detection</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              See how clustered reports become ranked signals with recommended
-              scientific follow-up actions.
+              See how similar reports are grouped into potential patterns with
+              a transparent screening priority.
             </p>
             <span className="mt-4 inline-block text-sm font-semibold text-teal group-hover:underline">View signals →</span>
           </Link>
