@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { DemoBadge } from "@/components/DemoBadge";
-import { DEMO_SIGNALS, CATEGORY_COUNTS } from "@/lib/demoData";
+import { DEMO_SIGNALS, CATEGORY_COUNTS, DEMO_REPORTS } from "@/lib/demoData";
 import { TeamSection, TeamIdentityBlock } from "@/components/TeamSection";
 
 export const Route = createFileRoute("/")({
@@ -23,11 +23,11 @@ const STEPS = [
   },
   {
     title: "Analyse",
-    text: "Reports are tagged by medicine, category, location and severity, then reviewed in the EcoPV Dashboard workflow.",
+    text: "Reports are tagged by pharmaceutical category, environmental medium, source and location, then reviewed in the EcoPV Dashboard workflow.",
   },
   {
     title: "Detect",
-    text: "Clustering similar reports surfaces statistical signals that may warrant scientific follow-up and literature review.",
+    text: "A transparent rule-based screen groups similar reports into potential patterns that require expert and environmental verification.",
   },
 ];
 
@@ -41,7 +41,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 }
 
 function Index() {
-  const strongSignals = DEMO_SIGNALS.filter((s) => s.strength === "Strong").length;
+  const highSignals = DEMO_SIGNALS.filter((s) => s.priority === "High").length;
 
   return (
     <div>
@@ -88,10 +88,10 @@ function Index() {
           </div>
 
           <div className="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-            <Stat value="1,248" label="Demo reports received" />
-            <Stat value="6" label="Active demo signals" />
-            <Stat value={String(strongSignals)} label="Strong signals" />
-            <Stat value="28" label="States represented" />
+            <Stat value={String(DEMO_REPORTS.length)} label="Simulated reports" />
+            <Stat value={String(DEMO_SIGNALS.length)} label="Screened patterns" />
+            <Stat value={String(highSignals)} label="High-priority patterns" />
+            <Stat value={String(new Set(DEMO_REPORTS.map((r) => r.location)).size)} label="Demo locations" />
           </div>
 
           <p className="mt-6 flex items-center gap-2 text-xs text-primary-foreground/70">
@@ -168,7 +168,7 @@ function Index() {
                   </div>
                 </div>
               ))}
-              <p className="pt-1 text-xs text-muted-foreground">Simulated distribution of 1,248 demo reports.</p>
+              <p className="pt-1 text-xs text-muted-foreground">Simulated distribution of {DEMO_REPORTS.length} demo reports.</p>
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ function Index() {
             </span>
             <h3 className="mt-4 font-display text-lg font-semibold text-foreground">EcoPV Dashboard</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Review the simulated case queue, KPIs and category trends that
+              Filter simulated reports and explore medium, concern and pharmaceutical charts that
               reviewers would monitor.
             </p>
             <span className="mt-4 inline-block text-sm font-semibold text-teal group-hover:underline">Open dashboard →</span>
@@ -217,8 +217,8 @@ function Index() {
             </span>
             <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Signal Detection</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              See how clustered reports become ranked signals with recommended
-              scientific follow-up actions.
+              See how similar reports are grouped into potential patterns with
+              a transparent screening priority.
             </p>
             <span className="mt-4 inline-block text-sm font-semibold text-teal group-hover:underline">View signals →</span>
           </Link>
