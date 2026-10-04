@@ -57,7 +57,7 @@ function Header() {
             <Link
               key={item.to}
               to={item.to}
-              activeOptions={item.to === "/" ? { exact: true } : undefined}
+              {...(item.to === "/" ? { activeOptions: { exact: true } } : {})}
               className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               activeProps={{ className: "bg-teal-soft text-accent-foreground hover:bg-teal-soft hover:text-accent-foreground" }}
             >
