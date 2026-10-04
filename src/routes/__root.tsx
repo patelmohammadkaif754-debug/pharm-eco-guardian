@@ -169,9 +169,14 @@ function Footer() {
           </span>
         </div>
       </div>
-      <div className="border-t border-white/10 py-4 text-center text-xs text-primary-foreground/60">
-        © 2026 EcoPV-India (student prototype) · Built by RISING PHARMAVISION · VBYLD 2027 – Hack
-        for Social Cause
+      <div className="border-t border-white/10 py-4">
+        <p className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 text-center text-xs text-primary-foreground/60">
+          <span className="whitespace-nowrap">© 2026 EcoPV-India (student prototype)</span>
+          <span aria-hidden>·</span>
+          <span className="whitespace-nowrap">Built by RISING PHARMAVISION</span>
+          <span aria-hidden>·</span>
+          <span className="whitespace-nowrap">VBYLD 2027 – Hack for Social Cause</span>
+        </p>
       </div>
     </footer>
   );
