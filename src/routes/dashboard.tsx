@@ -63,15 +63,15 @@ function DashboardPage() {
           <div className="rounded-2xl border border-border bg-card p-6 shadow-sm lg:col-span-3">
             <h2 className="font-display text-lg font-semibold text-foreground">Demo reports by category</h2>
             <p className="mt-1 text-xs text-muted-foreground">Simulated distribution across the five concern categories.</p>
-            <div className="mt-6 flex h-48 items-end gap-3 sm:gap-6">
+            <div className="mt-6 flex h-48 gap-3 sm:gap-6">
               {CATEGORY_COUNTS.map((c, i) => (
-                <div key={c.category} className="flex flex-1 flex-col items-center gap-2">
+                <div key={c.category} className="flex h-full flex-1 flex-col items-center justify-end gap-2">
                   <span className="text-xs font-semibold text-foreground">{c.count}</span>
                   <div
                     className={`w-full rounded-t-lg ${i === 0 ? "bg-gradient-to-t from-teal to-leaf" : "bg-teal/60"}`}
-                    style={{ height: `${Math.max(8, c.pct * 1.8)}%` }}
+                    style={{ height: `${Math.max(6, c.pct * 1.7)}%` }}
                   />
-                  <span className="line-clamp-2 h-8 text-center text-[10px] leading-tight text-muted-foreground sm:text-[11px]">
+                  <span className="line-clamp-2 text-center text-[10px] leading-tight text-muted-foreground sm:text-[11px]">
                     {c.category}
                   </span>
                 </div>
