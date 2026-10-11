@@ -42,11 +42,11 @@ export const DEMO_REPORTS: EcoReport[] = [
   r(12, "2026-09-14", "Student", "Antibiotic", "Surface Water", "Manufacturing Unit", "Unusual Discharge", "Baddi, Himachal Pradesh", "Screening", "Coloured discharge entering a stream used for irrigation."),
   r(11, "2026-09-12", "Researcher", "Hormonal Medicine", "Wastewater", "Household Disposal", "Unusual Discharge", "Pune, Maharashtra", "Received", "Concern raised about household disposal of hormonal tablets into toilets."),
   r(10, "2026-09-10", "General Public", "Analgesic / NSAID", "Groundwater", "Unknown", "Odour / Discolouration", "Kochi, Kerala", "Received", "Community well reported unusual taste."),
-  r(9, "2026-09-08", "General Public", "Expired / Mixed Medicines", "Open Land / Waste Site", "Household Disposal", "Littered Medicine Packs", "Jaipur, Rajasthan", "Screening", "Medicine packs scattered near a garbage collection point."),
+  r(9, "2026-09-08", "General Public", "Expired / Mixed Medicines", "Open Land / Waste Site", "Household Disposal", "Littered Medicine Packs", "New Delhi, Delhi", "Screening", "Medicine packs scattered near a garbage collection point."),
   r(8, "2026-09-06", "Pharmacist", "Antibiotic", "Wastewater", "Pharmacy", "Improper Disposal", "Hyderabad, Telangana", "Received", "Returned antibiotic stock reportedly flushed down drain."),
   r(7, "2026-09-04", "Farmer", "Veterinary Medicine", "Surface Water", "Veterinary / Farm", "Aquatic Life Observation", "Patna, Bihar", "Received", "Concern about cattle-treatment wash water entering pond."),
   r(6, "2026-09-02", "Student", "Antidiabetic", "Wastewater", "Household Disposal", "Improper Disposal", "Ahmedabad, Gujarat", "Received", "Hostel residents disposing unused tablets in drains."),
-  r(5, "2026-08-30", "General Public", "Expired / Mixed Medicines", "Open Land / Waste Site", "Hospital / Clinic", "Improper Disposal", "Jaipur, Rajasthan", "Screening", "Mixed medicine waste seen outside a small clinic."),
+  r(5, "2026-08-30", "General Public", "Expired / Mixed Medicines", "Open Land / Waste Site", "Hospital / Clinic", "Improper Disposal", "Lucknow, Uttar Pradesh", "Screening", "Mixed medicine waste seen outside a small clinic."),
   r(4, "2026-08-28", "Healthcare Professional", "Hormonal Medicine", "Surface Water", "Hospital / Clinic", "Unusual Discharge", "Pune, Maharashtra", "Received", "Discharge pipe noticed close to a lake inlet."),
   r(3, "2026-08-25", "Researcher", "Analgesic / NSAID", "Soil", "Veterinary / Farm", "Other", "Guwahati, Assam", "Received", "Question raised about carcass disposal of treated livestock."),
   r(2, "2026-08-22", "Student", "Other / Unknown", "Groundwater", "Unknown", "Odour / Discolouration", "Lucknow, Uttar Pradesh", "Received", "Hand-pump water reported with chemical-like smell."),
@@ -105,7 +105,7 @@ export function screen(matches: EcoReport[]): { priority: Priority; reasons: str
   }
   const distinctReporters = new Set(matches.map((m) => m.reporterType)).size;
   reasons.push(`Reported by ${distinctReporters} different reporter type${distinctReporters === 1 ? "" : "s"}.`);
-  return { priority: levels[lvl], reasons };
+  return { priority: levels[lvl] ?? "Low", reasons };
 }
 
 function pattern(id: string, title: string, description: string, filter: (r: EcoReport) => boolean): SignalPattern {
