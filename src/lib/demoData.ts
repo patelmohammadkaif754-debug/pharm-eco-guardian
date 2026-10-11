@@ -105,7 +105,7 @@ export function screen(matches: EcoReport[]): { priority: Priority; reasons: str
   }
   const distinctReporters = new Set(matches.map((m) => m.reporterType)).size;
   reasons.push(`Reported by ${distinctReporters} different reporter type${distinctReporters === 1 ? "" : "s"}.`);
-  return { priority: levels[lvl], reasons };
+  return { priority: levels[lvl] ?? "Low", reasons };
 }
 
 function pattern(id: string, title: string, description: string, filter: (r: EcoReport) => boolean): SignalPattern {
