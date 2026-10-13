@@ -1,50 +1,97 @@
-# EcoPV Connect
+EcoPV-India
 
-Build a responsive web app prototype called “EcoPV-India”.
+From Medicine Safety to Environmental Safety
 
-Purpose: A proposed digital environmental pharmacovigilance platform that helps users report environmental concerns potentially related to pharmaceutical products.
+EcoPV-India is a student-proposed digital environmental pharmacovigilance platform designed to organise reports of potential environmental concerns associated with pharmaceutical products.
 
-Create a professional pharmaceutical + environmental design using navy, teal, white and green.
+🌐 Live Prototype: https://pharm-eco-guardian.lovable.app
 
-Create 4 main sections:
+1. Problem Statement
 
-1. Home
+Pharmaceutical products can enter the environment through various pathways, including medicine disposal, wastewater and pharmaceutical manufacturing. Identifying and organising potential environmental concerns is an important step towards better environmental awareness and investigation.
 
-2. Report Environmental Concern
+Environmental concerns may be difficult to compare when reports lack consistent information about the suspected product, environmental medium, location and time.
 
-3. EcoPV Dashboard
+2. Proposed Solution
 
-4. Signal Detection
+EcoPV-India proposes a digital workflow for recording and organising environmental concern reports potentially associated with pharmaceutical products.
 
-Home should explain:
+The prototype aims to demonstrate how structured reporting and dashboard-based review could support preliminary identification of recurring patterns for further expert assessment.
 
-“From Medicine Safety to Environmental Safety”
+3. Key Prototype Sections
 
-and clearly state that this is a student-developed proposed prototype, not an official government or IPC programme.
+1. Home — Introduction to the EcoPV-India concept.
+2. Report Environmental Concern — Proposed workflow for documenting an environmental concern.
+3. EcoPV Dashboard — Proposed dashboard for organising and reviewing reported concerns.
+4. Signal Detection — Conceptual approach for highlighting potential recurring patterns for expert review.
 
-Make the navigation and pages functional and mobile responsive.
+Features and workflows should be understood according to what is currently implemented in the live prototype.
 
-For now, focus on the UI and core workflow. Use simulated/demo data clearly labelled as Demo Data.
+4. Proposed Reporting Information
 
-This project was built with [Lovable](https://lovable.dev).
+Depending on the implemented form, a report may include:
 
-**Live app**: https://pharm-eco-guardian.lovable.app
+- Suspected pharmaceutical product or category
+- Environmental medium, such as water or soil
+- Description and potential source of the concern
+- Location and date, where available
+- Supporting observations or evidence
+- Relevant missing information
 
-## Build with Lovable
+Reports would require appropriate review before any conclusions could be drawn.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d69427a6-02e1-4015-abb8-fd7073086397).
+5. Intended Social Impact
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+EcoPV-India aims to demonstrate how structured digital reporting could help improve environmental awareness, organise information and support future investigation of potential pharmaceutical-related environmental concerns.
 
-## Development
+Potential future users and collaborators could include students, researchers, environmental experts and relevant regulatory stakeholders.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+6. Technology and Development
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+This repository contains the project source files for the EcoPV-India web prototype.
+
+Technology: Refer to "package.json" and the source files for the exact frameworks, libraries and tools used.
+
+For local development, install the project's dependencies and use the scripts documented in "package.json".
+
+7. Limitations and Responsible Use
+
+- EcoPV-India is a student-proposed prototype, not an official government or regulatory reporting system.
+- It is not an established or validated environmental risk assessment tool.
+- A reported concern or recurring pattern does not, by itself, establish contamination, toxicity or causality.
+- Potential patterns require appropriate evidence, expert review and, where applicable, investigation by competent authorities.
+- Do not enter confidential personal information or sensitive patient data into the prototype.
+
+EcoPV-India is intended to complement awareness and research efforts, not replace established pharmacovigilance systems or environmental regulatory mechanisms.
+
+8. Future Development
+
+Possible future work includes:
+
+- Standardised reporting fields and data validation
+- Improved filtering and visualisation of reported concerns
+- Transparent, evidence-based review workflows
+- Testing with clearly labelled simulated data
+- Expert consultation and usability evaluation
+- Appropriate privacy, security and data governance measures
+
+These are proposed future improvements and should not be interpreted as completed features.
+
+9. Team
+
+Team Name: RISING PHARMAVISION
+
+- Mohammad Kaif Patel — Team Lead
+- Insha Patel — Team Member
+- Fatima Shaikh — Team Member
+
+Institution: M.S. College of Pharmacy, Devghar, Taluka Wada, Palghar, Maharashtra
+University: University of Mumbai
+
+10. License
+
+This project is distributed under the MIT License. See the "LICENSE" file for the applicable terms.
+
+Disclaimer
+
+EcoPV-India is an independent student project. It is not affiliated with, endorsed by or operated by the Government of India, MY Bharat, the Indian Pharmacopoeia Commission or the European Medicines Agency. References to external programmes or organisations do not imply their endorsement.
